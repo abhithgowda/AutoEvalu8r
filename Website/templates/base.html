@@ -1,0 +1,62 @@
+{% extends "skelet.html" %}
+{% block content %}
+<div class="flex justify-center items-center h-screen" id="eval">
+    <div class="card shrink-0 w-full  max-w-xl shadow-2xl bg-base-100" >
+        <form class="card-body" method="post" action="/predict">
+            <div class="form-control">
+                Select Buying Price
+                <select class="select select-primary w-full max-w-xl" name="bp">
+                    <option>Very High</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </div>
+            <div class="form-control">
+                Select Maintenance Cost
+                <select class="select select-primary w-full max-w-xl" name="mc">
+                    <option>Very High</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </div>
+            <div class="form-control">
+                Number Of Doors
+                <select class="select select-primary w-full max-w-xl" name="nd">
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>More</option>
+                </select>
+            </div>
+            <div class="form-control">
+                Number Of Person
+                <select class="select select-primary w-full max-w-xl" name="np">
+                    <option>2</option>
+                    <option>4</option>
+                    <option>More</option>
+                </select>
+            </div>
+            <div class="form-control">
+                Lug Boot
+                <select class="select select-primary w-full max-w-xl" name="lb">
+                    <option>Small</option>
+                    <option>Medium</option>
+                    <option>Big</option>
+                </select>
+            </div>
+            <div class="form-control">
+                Safety
+                <select class="select select-primary w-full max-w-xl" name="st">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+            <div class="form-control mt-6">
+                <button class="btn btn-primary">Predict</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
